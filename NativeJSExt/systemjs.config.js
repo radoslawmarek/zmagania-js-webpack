@@ -5,9 +5,9 @@ SystemJS.config({
         "loader-plugin": "loader-plugin.js"
     },
     meta: {
-        // "*.js": {
-        //     loader: 'loader-plugin.js'
-        // }
+        "**/*.js": {
+            loader: 'loader-plugin'
+        }
     },
     packages: {
         "ts": {
