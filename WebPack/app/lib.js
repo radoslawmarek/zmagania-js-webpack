@@ -1,10 +1,11 @@
-var button = document.getElementById("button");
-var elements = new Array();
+export var button = document.getElementById("button");
+export var elements = new Array();
+
 elements.push(document.getElementById("firstElement"));
 elements.push(document.getElementById("secondElement"));
 elements.push(document.getElementById("thirdElement"));
 
-function highlightElement (elementIndex) {
+export var highlightElement = function (elementIndex) {
     for(var i=0; i < elements.length; i++) {
         var element = elements[i];
         if (i === elementIndex) {

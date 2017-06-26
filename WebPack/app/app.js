@@ -1,6 +1,8 @@
-//import { joinWords } from './lib.js';
+import { button } from './lib.js';
+import { elements } from './lib.js';
+import { highlightElement } from './lib.js';
 
-//console.log(joinWords());
+
 var selectedElement = 0;
 
 button.innerText = "Naciśnij mnie!";
