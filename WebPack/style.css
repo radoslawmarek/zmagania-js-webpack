@@ -33,8 +33,15 @@ h1 {
     width: 100%;
     text-align: center;
     margin: 25px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
 
-.message-container > h2 {
-    padding: 25px 50px;
+.message-container > span {
+    float: left;
+    margin: 25px 10px;
+    border: 1px solid green;
+    min-width: 200px;
+    min-height: 75px;
 }

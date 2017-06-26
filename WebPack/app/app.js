@@ -3,23 +3,37 @@
 //console.log(joinWords());
 
 var button = document.getElementById("button");
-var message = document.getElementById("message");
+var elements = new Array();
+elements.push(document.getElementById("firstElement"));
+elements.push(document.getElementById("secondElement"));
+elements.push(document.getElementById("thirdElement"));
 
-button.innerText = "Pokaż komunikat";
+var selectedElement = 0;
+
+button.innerText = "Naciśnij mnie!";
+highlightElement(selectedElement);
 
 button.onclick = function () {
-    if (button.innerText === "Pokaż komunikat".toUpperCase()) {
-        message.innerText = "Ala ma kota!";
-        button.innerText = "Ukryj komunikat";
+    selectedElement++;
+    if (selectedElement > 2) {
+        selectedElement = 0;
     }
-    else {
-        message.innerText = "";
-        button.innerText = "Pokaż komunikat";
-    }
-    
-    
-
+    highlightElement(selectedElement);
 }
+
+function highlightElement (elementIndex) {
+    for(var i=0; i < elements.length; i++) {
+        var element = elements[i];
+        if (i === elementIndex) {
+            element.style.backgroundColor = "red";                
+        }
+        else {
+            element.style.backgroundColor = "white";  
+        }
+    }
+}
+
+
 
 
 
