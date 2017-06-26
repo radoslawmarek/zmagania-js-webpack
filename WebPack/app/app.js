@@ -1,3 +1,4 @@
+import '../style.css';
 import { button } from './lib.js';
 import { elements } from './lib.js';
 import { highlightElement } from './lib.js';
